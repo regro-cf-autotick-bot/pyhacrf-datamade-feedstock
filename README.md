@@ -184,5 +184,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@izahn](https://github.com/izahn/)
 * [@osamples](https://github.com/osamples/)
 
