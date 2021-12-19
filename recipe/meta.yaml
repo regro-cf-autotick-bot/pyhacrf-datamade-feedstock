@@ -1,5 +1,5 @@
 {% set name = "pyhacrf-datamade" %}
-{% set version = "0.2.5" %}
+{% set version = "0.2.6" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyhacrf-datamade-{{ version }}.tar.gz
-  sha256: cf9dc239090696cee301d5d32074e1ed881853c6da789ce05817c072b22c4f44
+  sha256: cddbd89aad5849fb8fba6f93bfea177fd02dba1b81718fd215f57b48d3d6f5ed
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -22,10 +22,10 @@ requirements:
     - cython
     - numpy
     - pip
-    - python 
+    - python
   run:
     - pylbfgs
-    - python 
+    - python
     - {{ pin_compatible('numpy') }}
 
 test:
