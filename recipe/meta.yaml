@@ -7,17 +7,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyhacrf-datamade-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyhacrf-datamade-{{ version }}.tar.gz
   sha256: cddbd89aad5849fb8fba6f93bfea177fd02dba1b81718fd215f57b48d3d6f5ed
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - cython
     - numpy
@@ -26,7 +27,6 @@ requirements:
   run:
     - pylbfgs
     - python
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
