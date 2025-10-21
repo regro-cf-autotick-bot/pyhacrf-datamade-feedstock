@@ -24,10 +24,10 @@ requirements:
     - numpy
     - pip
     - python
+    - setuptools
   run:
     - pylbfgs
     - python
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
